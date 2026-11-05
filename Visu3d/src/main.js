@@ -4,7 +4,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 // ESCENA
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xbfe3ff);
+scene.background = new THREE.Color(0x202020);
 
 // CÁMARA
 const camera = new THREE.PerspectiveCamera(
@@ -56,7 +56,7 @@ const loader = new OBJLoader();
 console.log('Cargando tree.obj...');
 
 loader.load(
-  '/tree.obj',
+  import.meta.env.BASE_URL + 'tree.obj',
 
   (object) => {
     console.log('Árbol cargado correctamente');
@@ -140,4 +140,3 @@ function animate() {
 }
 
 animate();
-
